@@ -36,7 +36,9 @@ namespace TestDeneme
                 driver.FindElement(By.XPath("//*[@id='search']")).SendKeys("ceket"); //tag kısmının tam id'sini bulamadığım için bu şekilde bıraktım
                 Actions tus = new Actions(driver);
                 tus.SendKeys(Keys.Enter); //burada web sitesinde arama butonu olmadığı için aramayı yapmak için enter tuşuna basıyorum
-
+                driver.FindElement(By.XPath("//*[@id='pagedListContainer']/div[2]/div[2]/button")).Click(); //burada "Daha Fazla Yükle" butonunun Xpath lokasyonunu alıp tıklattım
+                driver.FindElement(By.XPath("//*[@data-id="1073542-170"]/div[3]/div[2]/div[2]/div/div[2]/a")).Click(); //indirimli random ürünü, ve id'sini aldım
+                
 
                 Console.WriteLine("Element found by id");
             }
